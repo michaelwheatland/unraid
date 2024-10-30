@@ -1,7 +1,3 @@
-# NocoDB Unraid Community App Template
-
-A community-maintained app template for Unraid, providing a solid foundation for building your own NocoDB integration.
-
 **About the Author**
 
 I'm Michael Wheatland, a professional chemical engineer with experience in clean energy, minerals processing, and sustainable manufacturing. Please note that I'm not a software engineer, so you use this template at your own risk!
