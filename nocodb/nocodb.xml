@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nocodb</Name>
+  <Repository>nocodb/nocodb-timely</Repository>
+  <Registry>https://hub.docker.com/r/nocodb/nocodb-timely</Registry>
+  <Network>auth</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.nocodb.com/</Project>
+  <Overview>NocoDB is a no-code database platform that allows teams to collaborate and build applications with ease of a familiar and intuitive spreadsheet interface. This allows even non-developers or business users to become software creators.&#xD;
+&#xD;
+NocoDB works by connecting to any relational database and transforming them into a smart spreadsheet interface! This allows you to build no-code applications collaboratively with teams. NocoDB currently works with MySQL, PostgreSQL &amp;amp; SQLite (only in Open Source) databases.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:5001]</WebUI>
+  <TemplateURL/>
+  <Icon>https://docs.nocodb.com/img/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1730249266</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Postgresql Server&#xD;
+</Requires>
+  <Config Name="Web Interface" Target="8080" Default="5001" Mode="tcp" Description="Port that the Web interface can be accessed" Type="Port" Display="always" Required="true" Mask="false">5001</Config>
+  <Config Name="NC_ADMIN_EMAIL" Target="NC_ADMIN_EMAIL" Default="" Mode="" Description="Username of the first NocoDB User" Type="Variable" Display="always" Required="false" Mask="false">admin@email.com</Config>
+  <Config Name="NC_ADMIN_PASSWORD" Target="NC_ADMIN_PASSWORD" Default="password" Mode="" Description="Admin Pasword - Must be at least 8 characters" Type="Variable" Display="always" Required="true" Mask="false">AdminPassword</Config>
+  <Config Name="NC_AUTH_JWT_SECRET" Target="NC_AUTH_JWT_SECRET" Default="" Mode="" Description="Generate a secret code for encryption here:&#13;&#10;https://jwtsecret.com/generate" Type="Variable" Display="always" Required="false" Mask="false">InsertYourEncryptionKeyHere</Config>
+  <Config Name="Database Address" Target="NC_DB" Default="pg://localhost:5432?u=user&amp;amp;p=password&amp;amp;d=d1" Mode="" Description="Enter the address, username and password of the database" Type="Variable" Display="always" Required="false" Mask="false">pg://postgresql:5432?u=username&amp;p=password&amp;d=d1</Config>
+  <Config Name="Data Directory" Target="NC_TOOL_DIR" Default="/usr/app/data/" Mode="" Description="NocoDB Data Directory" Type="Variable" Display="always" Required="true" Mask="false">/usr/app/data/</Config>
+  <Config Name="Persistent Volume for files" Target="/usr/app/data/" Default="/mnt/user/appdata/nocodb" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nocodb</Config>
+  <Config Name="NC_PUBLIC_URL" Target="NC_PUBLIC_URL" Default="" Mode="" Description="URL of the web interface" Type="Variable" Display="advanced" Required="false" Mask="false">https://mydomain.com</Config>
+  <Config Name="PORT" Target="PORT" Default="8080" Mode="" Description="Port of NocoDB within the container" Type="Variable" Display="advanced" Required="false" Mask="false">8080</Config>
+</Container>
